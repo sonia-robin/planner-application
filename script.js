@@ -10,5 +10,19 @@ setInterval(currentDayTime, 1000)
 // var today = dayjs().format("dddd, MMMM Do");
 // $("#currentDay").text(today);
 
-var currentHour = dayjs().format("H");
+var currentHour = dayjs().format("HH");
 console.log(currentHour);
+
+$(".time-block").each(function(){
+    var timeIdInt = this.id
+    console.log(timeIdInt);
+    if(currentHour > timeIdInt){
+        $(this).children("textarea").addClass("past");
+    }
+    else if(currentHour === timeIdInt){
+        $(this).children("textarea").addClass("present");
+    }
+    else {
+        $(this).children("textarea").addClass("future");
+    }
+});
