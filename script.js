@@ -13,13 +13,14 @@ setInterval(currentDayTime, 1000)
 var currentHour = dayjs().format("HH");
 console.log(currentHour);
 
+// Color-code each timeblock based on past, present, and future
 $(".time-block").each(function(){
-    var timeIdInt = this.id
-    console.log(timeIdInt);
-    if(currentHour > timeIdInt){
+    var timeId = this.id
+    console.log(timeId);
+    if(currentHour > timeId){
         $(this).children("textarea").addClass("past");
     }
-    else if(currentHour === timeIdInt){
+    else if(currentHour === timeId){
         $(this).children("textarea").addClass("present");
     }
     else {
