@@ -9,6 +9,8 @@ The calendar includes timeblocks for standard business hours. Each timeblock is 
 A user can enter an event when they click a timeblock and save it in local storage when the save button is clicked. Saved events persist between refreshes of a page.
 Events which are not saved will be cleared after refreshing the page.
 
+![Workday planner screenshot](./assets/work-day-scheduler.png)
+
 ## Instalation
 N/A
 
